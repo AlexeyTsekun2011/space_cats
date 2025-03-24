@@ -18,7 +18,8 @@ pg.init()
 pg.mixer.init()
 # icon = pg.image.load("gamecontroller.ico")
 # pg.display.set_icon(icon)
-size = (800, 600)
+
+size = (SCREEN_WIDTH,SCREEN_HEIGHT)
 screen = pg.display.set_mode(size)
 pg.display.set_caption("Космические коты")
 
@@ -30,7 +31,7 @@ mode = "start_scene"
 space = pg.image.load("space.png")
 space = pg.transform.scale(space, size)
 
-heart = pg.image.load("heart.png").convert_alpha()
+heart = pg.image.load("output/heart.png").convert_alpha()
 heart = pg.transform.scale(heart, (30, 30))
 heart_count = 3
 
@@ -79,9 +80,9 @@ final_text = ["Огромное вам спасибо,",
 
 text_number = 0
 
-laser_sound = pg.Sound("laser.wav")
-win_sound = pg.Sound("win.wav")
-pg.mixer.music.load("music.wav")
+laser_sound = pg.Sound("sounds/laser.wav")
+win_sound = pg.Sound("sounds/win.wav")
+pg.mixer.music.load("sounds/music.wav")
 pg.mixer.music.set_volume(0.25)
 pg.mixer.music.play()
 
