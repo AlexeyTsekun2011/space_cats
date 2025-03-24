@@ -95,6 +95,7 @@ class Starship(pg.sprite.Sprite):
             if keys[pg.K_a]:
                 self.rect.x -= 2
 
+
     def switch_mode(self):
         self.image = pg.image.load("cat_starship.png")
         self.image = pg.transform.scale(self.image, (100, 100))
