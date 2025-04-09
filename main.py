@@ -32,7 +32,7 @@ space = pg.image.load("space.png")
 space = pg.transform.scale(space, size)
 
 heart = pg.image.load("output/heart.png").convert_alpha()
-heart = pg.transform.scale(heart, (30, 30))
+heart = pg.transform.scale(heart, (50, 50))
 heart_count = 3
 
 meteorites = pg.sprite.Group()
@@ -43,7 +43,7 @@ captain = Captain()
 alien = Alien()
 starship = Starship()
 
-font_1 = pg.font.Font("font.otf", 25)
+font_1 = pg.font.Font("font.otf", 40)
 
 start_text = ["Мы засекли сигнал с планеты Мур.",
               "",
@@ -172,7 +172,7 @@ while is_running:
         lasers.draw(screen)
 
         for i in range(heart_count):
-            screen.blit(heart, (i * 30, 0))
+            screen.blit(heart, (i * 30, 10))
 
     if mode == "final_scene":
         dialogue_mode(alien, final_text)
